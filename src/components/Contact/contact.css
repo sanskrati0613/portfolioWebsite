@@ -1,0 +1,130 @@
+#contactPage {
+  min-height: calc(100vh - 4rem);
+  width: 100vw;
+  padding: 3rem 1rem;
+  background: radial-gradient(#0f0f25, #09090f);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.contactPageTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.contactDesc {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+.contactForm {
+  width: 100%;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: none;
+  background: #191941;
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+  color: #aaa;
+}
+
+
+
+.submitBtn {
+  align-self: center;
+  padding: 0.75rem 2rem;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submitBtn:hover {
+  background: wheat;
+}
+
+.links {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.link {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.link:hover {
+  transform: scale(1.2);
+}
+
+.contactForm input,
+.contactForm textarea {
+  display: block;
+  margin: 0.5rem auto;       /* Centers the element */
+  width: 100%;
+  max-width: 40rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  background: #191941;
+  color: white;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .contactPageTitle {
+    font-size: 2rem;
+  }
+
+  .contactDesc {
+    font-size: 1rem;
+  }
+
+  .submitBtn {
+    font-size: 0.95rem;
+  }
+
+  .link {
+    width: 30px;
+    height: 30px;
+  }
+}

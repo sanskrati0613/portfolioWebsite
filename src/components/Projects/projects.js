@@ -12,8 +12,8 @@ const projectList = [
     image: portfolioWebsiteImg,
     description: 'A personal portfolio website built using React.js to showcase my projects, skills, education, and professional experience. The site features a responsive layout, dynamic project modals, designed to provide a clear and interactive overview of my frontend development expertise, the portfolio emphasizes UI/UX aesthetics, accessibility, and modern web practices.',
     tech: ['HTML', 'CSS', 'JavaScript', 'React'],
-    liveLink: 'https://your-amazon-clone.vercel.app/',
-    codeLink: 'https://github.com/yourusername/amazon-clone',
+    liveLink: 'https://sanskrati-jain-portfolio-website-six-pi-41.vercel.app/',
+    codeLink: 'https://github.com/sanskrati0613/portfolioWebsite.git',
   },
   // {
   //   title: 'Music Search App',

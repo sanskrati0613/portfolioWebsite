@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './projects.css';
 import { FaExternalLinkAlt, FaGithub, FaTimes } from 'react-icons/fa';
 
-// Sample project screenshots
 import portfolioWebsiteImg from '../../assets/portfolio1.png';
 // import musicAppImg from '../../assets/music-app.png';
 

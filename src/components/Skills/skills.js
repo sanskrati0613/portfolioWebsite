@@ -1,8 +1,7 @@
-// src/components/Skills/Skills.jsx
 
 import React from 'react';
 import './skills.css';
-import html from '../../assets/html5.png'; // Replace with actual icons
+import html from '../../assets/html5.png'; 
 import css from '../../assets/css3.png';
 import js from '../../assets/javascript.png';
 import react from '../../assets/react.png';

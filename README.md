@@ -1,70 +1,131 @@
-# Getting Started with Create React App
+# 🌐 Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my **personal portfolio website** built using **React.js**. It showcases my projects, skills, certifications, contact form, and professional experience in a clean and responsive design.
 
-## Available Scripts
+![Portfolio Screenshot](./public/preview.png)
 
-In the project directory, you can run:
+## 🚀 Live Website
 
-### `npm start`
+🔗 [Click to Visit My Portfolio](https://sanskrati-jain-portfolio-website-six-pi-41.vercel.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📌 Features
 
-### `npm test`
+- ✅ Fully responsive and mobile-friendly UI
+- 🎨 Modern design built with HTML, CSS, JavaScript, and React
+- 💼 Project showcase with image previews and modal popups
+- 📫 Contact form that sends messages directly to email using **EmailJS**
+- 🌐 Linked to GitHub, LinkedIn, and Instagram profiles
+- 📝 Dynamic components and clean code architecture
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Category       | Technology              |
+|----------------|--------------------------|
+| Frontend       | React.js, HTML5, CSS3    |
+| Styling        | Custom CSS (responsive)  |
+| Icons          | `react-icons`            |
+| Email Handling | [EmailJS](https://www.emailjs.com/) |
+| Hosting        | Vercel / Netlify         |
+| Version Control| Git & GitHub             |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📂 Folder Structure
 
-### `npm run eject`
+```
+portfolio/
+├── public/
+├── src/
+│ ├── assets/
+│ ├── components/
+│ │ ├── About
+│ │ ├── Certifications
+│ │ ├── Contact
+│ │ ├── Education
+│ │ ├── Footer
+│ │ ├── Intro
+│ │ ├── NavBar
+│ │ ├── Projects
+│ │ ├── Skills
+│ │ ├── Training
+│ ├── App.js
+│ ├── index.js
+├── .gitignore
+├── package.json
+└── README.md
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📬 Contact Form Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This portfolio uses **EmailJS** to send form submissions to your inbox.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> Steps to make it work:
+1. Create an account at [emailjs.com](https://www.emailjs.com)
+2. Create a new service and email template
+3. Replace the `service_id`, `template_id`, and `user_id` in `Contact.js`
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 💡 How to Use
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Clone the Repository**
 
-### Code Splitting
+```bash
+git clone https://github.com/sanskrati0613/portfolioWebsite.git
+cd portfolioWebsite
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Install Dependencies**
 
-### Analyzing the Bundle Size
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **Run Locally**
 
-### Making a Progressive Web App
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. **Build for Production**
 
-### Advanced Configuration
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📦 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- The site is deployed via **Vercel** (or Netlify)
+- Auto deployment is triggered when changes are pushed to GitHub
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🙋‍♀️ Author
+
+**Sanskrati Jain**
+
+- GitHub: [@sanskrati0613](https://github.com/sanskrati0613)
+- LinkedIn: [Sanskrati Jain](https://www.linkedin.com/in/sanskrati-jain-295b65271)
+- Instagram: [@trivia_noon](https://www.instagram.com/trivia_noon/)
+
+---
+
+## ⭐ Acknowledgements
+
+- [Create React App](https://create-react-app.dev/)
+- [EmailJS Docs](https://www.emailjs.com/docs/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).

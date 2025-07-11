@@ -1,9 +1,8 @@
 import React from 'react';
 import './education.css';
 
-import collegeIcon from '../../assets/arya.jpeg';   // Add appropriate icon files
+import collegeIcon from '../../assets/arya.jpeg'; 
 import schoolIcon from '../../assets/schools.png';
-import boardIcon from '../../assets/board.png';
 
 
 const educationData = [

@@ -98,7 +98,7 @@
 .contactForm input,
 .contactForm textarea {
   display: block;
-  margin: 0.5rem auto;       /* Centers the element */
+  margin: 0.5rem auto;
   width: 100%;
   max-width: 40rem;
   padding: 1rem;

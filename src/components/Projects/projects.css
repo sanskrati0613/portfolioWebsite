@@ -1,4 +1,3 @@
-/* General Layout */
 #projects {
   padding: 4rem 2rem;
   background: radial-gradient(#0f0f25, #09090f);
@@ -18,7 +17,6 @@
   color: #b3b3b3;
 }
 
-/* Project Cards */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -53,7 +51,6 @@
   margin-top: 0.5rem;
 }
 
-/* Modal */
 .project-modal {
   position: fixed;
   top: 0;
@@ -115,7 +112,6 @@
   margin-bottom: 1.2rem;
 }
 
-/* Links */
 .modal-links {
   margin-top: 1rem;
   display: flex;
@@ -139,7 +135,6 @@
   background-color: #33334d;
 }
 
-/* Technology Tags */
 .project-tech {
   margin-top: 0.75rem;
   display: flex;
@@ -188,8 +183,6 @@
   background: #f0f0f0;
 }
 
-
-/* Responsive */
 @media (max-width: 600px) {
   .project-card {
     width: 90%;

@@ -12,10 +12,10 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      'service_qyhjjij',      // ✅ Your EmailJS service ID
-      'template_vc4g2we',     // ✅ Your template ID
+      'service_qyhjjij',      //  Your EmailJS service ID
+      'template_vc4g2we',     //  Your template ID
       form.current,
-      'nQJF3rUltGoLX71xC'     // ✅ Your public API key
+      'nQJF3rUltGoLX71xC'     //  Your public API key
     ).then(
       (result) => {
         console.log(result.text);

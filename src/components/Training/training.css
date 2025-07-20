@@ -1,6 +1,6 @@
 #training {
   padding: 4rem 2rem;
-  background: radial-gradient(#0f0f25, #09090f);
+  background: black;
   color: #fff;
 }
 
@@ -26,7 +26,8 @@
 }
 
 .timeline-content {
-  background: #111118;
+  background: linear-gradient(135deg, #0f0c29, #1d1a3b, #24243e);
+;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 15px;
   padding: 1.5rem;

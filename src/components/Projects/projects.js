@@ -3,6 +3,7 @@ import './projects.css';
 import { FaExternalLinkAlt, FaGithub, FaTimes } from 'react-icons/fa';
 
 import portfolioWebsiteImg from '../../assets/portfolio1.png';
+import MovieVerseImg from '../../assets/portfolio2.png';
 // import musicAppImg from '../../assets/music-app.png';
 
 const projectList = [
@@ -11,8 +12,16 @@ const projectList = [
     image: portfolioWebsiteImg,
     description: 'A personal portfolio website built using React.js to showcase my projects, skills, education, and professional experience. The site features a responsive layout, dynamic project modals, designed to provide a clear and interactive overview of my frontend development expertise, the portfolio emphasizes UI/UX aesthetics, accessibility, and modern web practices.',
     tech: ['HTML', 'CSS', 'JavaScript', 'React'],
-    liveLink: 'https://sanskrati-jain-portfolio-website-six-pi-41.vercel.app/',
+    liveLink: 'https://sanskrati-jain-portfolio-website.vercel.app/',
     codeLink: 'https://github.com/sanskrati0613/portfolioWebsite.git',
+  },
+    {
+    title: 'MovieVerse',
+    image: MovieVerseImg,
+    description: ' MovieVerse is a responsive React-based web app to discover movies and TV shows using the TMDB API, featuring search, trending content, and a personalized watchlist.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'React'],
+    liveLink: 'https://movie-verse-sable.vercel.app/',
+    codeLink: 'https://github.com/sanskrati0613/MovieVerse.git',
   },
   // {
   //   title: 'Music Search App',

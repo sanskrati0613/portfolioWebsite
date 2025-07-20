@@ -1,5 +1,6 @@
 
 #skills {
+  background: black;
   width: 100%;
   max-width: 65rem;
   margin: 0 auto;
@@ -38,7 +39,7 @@
 }
 
 .skills-box {
-  background: rgba(116, 114, 114, 0.03);
+  background: linear-gradient(135deg, #0f0c29, #1d1a3b, #24243e);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   padding: 1.5rem;

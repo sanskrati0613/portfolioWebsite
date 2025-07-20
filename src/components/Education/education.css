@@ -1,6 +1,6 @@
 #education {
   padding: 4rem 1.5rem;
-  background: radial-gradient(#0f0f25, #09090f);
+  background: black;
   color: #fff;
 }
 
@@ -29,7 +29,8 @@
 
 .edu-card {
   position: relative;
-  background: #14141f;
+  background: linear-gradient(135deg, #0f0c29, #1d1a3b, #24243e);
+;
   padding: 2rem;
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);

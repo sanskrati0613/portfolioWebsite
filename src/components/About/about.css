@@ -35,16 +35,23 @@
 .aboutBar {
     background: linear-gradient(135deg, #0f0c29, #1d1a3b, #24243e);
     display: flex;
+    align-items: center;
     margin: 1rem;
     padding: 1.5rem 2rem;
     border-radius: 0.5rem;
+    transition: .3s;
 }
 
-.aboutBarImg {
-    object-fit: cover;
-    height: 3rem;
-    width: 3rem;
+.aboutBar:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(241,190,94,.15);
+}
+
+.aboutBarIcon{
+    font-size: 3rem;
+    color: rgb(241,190,94);
     margin-right: 2rem;
+    flex-shrink: 0;
 }
 
 .aboutBarText>p {
@@ -62,9 +69,10 @@
     .aboutBarText>p {
         font-size: 3vw;
     }
-    .aboutBarImg {
+    .aboutBarIcon {
         height: 2.25rem;
         width: 2.25rem;
+        font-size: 2.3rem;
     }
     .aboutBarText>h2 {
         font-size: 5vw;

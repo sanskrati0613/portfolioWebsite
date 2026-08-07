@@ -1,0 +1,100 @@
+#internship {
+    padding: 4rem 1.5rem;
+    background: black;
+    color: white;
+}
+
+.intern-title {
+    font-size: 2.75rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.intern-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 3rem;
+}
+
+.intern-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.intern-card {
+    position: relative;
+    background: linear-gradient(135deg,#0f0c29,#1d1a3b,#24243e);
+    padding:2rem;
+    border-radius:15px;
+    width:100%;
+    max-width:600px;
+    border:1px solid rgba(255,255,255,.1);
+    transition:.3s;
+}
+
+.intern-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(241,190,94,.15);
+}
+
+.intern-header{
+    margin-bottom:1rem;
+}
+
+.intern-header h3{
+    font-size:1.45rem;
+}
+
+.intern-company{
+    color:#bbb;
+}
+
+.intern-duration{
+    color:#999;
+    font-size:.9rem;
+}
+
+.intern-type{
+    color:#f5f5f5;
+    font-weight:bold;
+    margin-bottom:.7rem;
+}
+
+.intern-description{
+    color:#bbb;
+    line-height:1.7;
+}
+
+.intern-line{
+    position:absolute;
+    bottom:-1.5rem;
+    left:50%;
+    transform:translateX(-50%);
+    width:3px;
+    height:2rem;
+    background:#5f5f5f;
+}
+
+@media(max-width:768px){
+
+.intern-card{
+    padding:1.5rem;
+}
+
+.intern-header{
+    text-align:center;
+}
+
+.intern-title{
+    font-size:2.2rem;
+}
+
+.intern-description{
+    text-align:center;
+}
+
+}

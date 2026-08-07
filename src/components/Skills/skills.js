@@ -5,11 +5,14 @@ import html from '../../assets/html5.png';
 import css from '../../assets/css3.png';
 import js from '../../assets/javascript.png';
 import react from '../../assets/react.png';
-import c from '../../assets/c.png';
 import cpp from '../../assets/cpp.png';
 import python from '../../assets/python.png';
 import github from '../../assets/github.png';
 import vscode from '../../assets/vscode.png';
+
+import {
+    FaJava
+} from "react-icons/fa";
 
 const Skills = () => {
   return (
@@ -30,10 +33,10 @@ const Skills = () => {
       <div className="skills-box">
         <h2>Languages</h2>
         <div className="skills-list">
-          <div className="skill-item"><img src={c} alt="C" />C</div>
           <div className="skill-item"><img src={cpp} alt="C++" />C++</div>
           <div className="skill-item"><img src={python} alt="Python" />Python</div>
           <div className="skill-item"><img src={js} alt="JavaScript" />JavaScript</div>
+          <div className="skill-item"><FaJava className="skillIcon java" />Java</div>
         </div>
       </div>
 

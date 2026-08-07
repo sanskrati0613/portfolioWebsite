@@ -4,6 +4,7 @@ import { FaExternalLinkAlt, FaGithub, FaTimes } from 'react-icons/fa';
 
 import portfolioWebsiteImg from '../../assets/portfolio1.png';
 import MovieVerseImg from '../../assets/portfolio2.png';
+import VoyageAdventuresImg from '../../assets/portfolio3.png';
 // import musicAppImg from '../../assets/music-app.png';
 
 const projectList = [
@@ -16,12 +17,20 @@ const projectList = [
     codeLink: 'https://github.com/sanskrati0613/portfolioWebsite.git',
   },
     {
+    title: 'Voyage Adventures',
+    image: VoyageAdventuresImg,
+    description: "Developed a responsive travel booking website using React.js with destination browsing, booking interface, reviews, and dynamic routing for a seamless user experience.",
+    tech: ['HTML', 'CSS', 'JavaScript', 'React'],
+    liveLink: "https://voyage-adventures.vercel.app/",
+    codeLink: "https://github.com/sanskrati0613/VoyageAdventures",
+  },
+    {
     title: 'MovieVerse',
     image: MovieVerseImg,
     description: ' MovieVerse is a responsive React-based web app to discover movies and TV shows using the TMDB API, featuring search, trending content, and a personalized watchlist.',
     tech: ['HTML', 'CSS', 'JavaScript', 'React'],
-    liveLink: 'https://movie-verse-sable.vercel.app/',
-    codeLink: 'https://github.com/sanskrati0613/MovieVerse.git',
+    liveLink: "https://movie-verse-sable.vercel.app/",
+    codeLink: "https://github.com/sanskrati0613/MovieVerse",
   },
   // {
   //   title: 'Music Search App',
@@ -64,7 +73,9 @@ const Projects = () => {
               </div>
 
             <div className="modal-links">
-              <a href={activeProject.liveLink} target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Live</a>
+              {activeProject.liveLink && (
+                <a href={activeProject.liveLink} target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Live Demo</a>
+              )}
               <a href={activeProject.codeLink} target="_blank" rel="noopener noreferrer"><FaGithub /> GitHub</a>
             </div>
           </div>

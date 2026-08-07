@@ -3,6 +3,7 @@ import Intro from './components/Intro/intro';
 import About from "./components/About/about";
 import Skills from './components/Skills/skills';
 import Education from './components/Education/education';
+import Internships from './components/Internships/internships';
 import Training from './components/Training/training';
 // import Certifications from './components/Certifications/certifications';
 import Projects from "./components/Projects/projects";
@@ -18,6 +19,7 @@ function App() {
             <About />
             <Skills/>
             <Education/>
+            <Internships/>
             <Training/>
             {/* <Certifications/> */}
             <Projects />

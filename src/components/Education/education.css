@@ -35,13 +35,17 @@
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   width: 100%;
-  max-width: 750px;
+  max-width: 600px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
   transition: transform 0.3s ease;
 }
 
-.edu-card:hover {
-  transform: scale(1.01);
+.edu-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(241,190,94,.15);
+
 }
 
 .edu-header {

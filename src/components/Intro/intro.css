@@ -9,13 +9,15 @@
 }
 
 .bg {
-  width: 300px;
-  height: 300px;
+  width: 360px;
+  height: 360px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 35px rgba(241,190,94,.25);
   margin-left: 2rem;
   transition: transform 0.3s ease;
+  animation: floatImage 4s ease-in-out infinite,
+             fadeInRight 1s ease;
 }
 
 .bg:hover {
@@ -38,8 +40,11 @@
     font-size: 3rem;
     font-weight: 700;
     display: flex;
+    flex: 1;
+    max-width: 600px;
     flex-direction: column;
     justify-content: center;
+    animation: fadeInLeft 1s ease;
 }
 
 .hello {
@@ -58,15 +63,35 @@
 }
 
 .btn {
-    background: white;
-    margin: 1rem 0;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+
+    padding: 0.9rem 2rem;
+
+    border: 2px solid rgb(241,190,94);
+    border-radius: 50px;
+
+    background: transparent;
+    color: rgb(241,190,94);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all .35s ease;
 }
 
 .btn:hover{
-  transform: scale(1.1);
+  background: rgb(241,190,94);
+
+    color: black;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 30px rgba(241,190,94,.35);
 }
 
 .btnImg {
@@ -117,4 +142,44 @@
   .introPara {
     font-size: 0.9rem;
   }
+}
+
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-12px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft{
+
+    from{
+        opacity:0;
+        transform:translateX(-50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes fadeInRight{
+
+    from{
+        opacity:0;
+        transform:translateX(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
 }

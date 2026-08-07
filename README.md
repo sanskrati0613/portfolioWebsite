@@ -16,7 +16,7 @@ This is my **personal portfolio website** built using **React.js**. It showcases
 - 🎨 Modern design built with HTML, CSS, JavaScript, and React
 - 💼 Project showcase with image previews and modal popups
 - 📫 Contact form that sends messages directly to email using **EmailJS**
-- 🌐 Linked to GitHub, LinkedIn, and Instagram profiles
+- 🌐 Linked to GitHub, LinkedIn,Gmail, and Instagram profiles
 - 📝 Dynamic components and clean code architecture
 
 ---
@@ -29,7 +29,7 @@ This is my **personal portfolio website** built using **React.js**. It showcases
 | Styling        | Custom CSS (responsive)  |
 | Icons          | `react-icons`            |
 | Email Handling | [EmailJS](https://www.emailjs.com/) |
-| Hosting        | Vercel / Netlify         |
+| Hosting        | Vercel         |
 | Version Control| Git & GitHub             |
 
 ---
@@ -47,6 +47,7 @@ portfolio/
 │ │ ├── Contact
 │ │ ├── Education
 │ │ ├── Footer
+│ │ ├── Internships
 │ │ ├── Intro
 │ │ ├── NavBar
 │ │ ├── Projects
@@ -103,7 +104,7 @@ npm run build
 
 ## 📦 Deployment
 
-- The site is deployed via **Vercel** (or Netlify)
+- The site is deployed via **Vercel**
 - Auto deployment is triggered when changes are pushed to GitHub
 
 ---

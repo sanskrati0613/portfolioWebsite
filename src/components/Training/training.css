@@ -24,6 +24,13 @@
   width: 90%;
   max-width: 600px;
 }
+.timeline-content:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(241,190,94,.15);
+
+}
 
 .timeline-content {
   background: linear-gradient(135deg, #0f0c29, #1d1a3b, #24243e);

@@ -48,8 +48,9 @@
   transition: transform 0.3s ease;
 }
 
-.skills-box:hover {
-  transform: scale(1.02);
+.skills-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 30px rgba(241,190,94,.15);
 }
 
 .skills-box h2 {

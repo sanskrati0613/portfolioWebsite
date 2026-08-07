@@ -36,7 +36,7 @@
 //   return (
 //     <section id="certifications">
 //       <h2 className="cert-title">Certifications</h2>
-//       <p className='cert-subtitle'>Certifications and real-world experiences that enhanced my technical and professional growth.</p>
+//       <p className='cert-subtitle'>Certifications and real-world interneriences that enhanced my technical and professional growth.</p>
 //       <div className="cert-list">
 //         {certifications.map((cert, index) => (
 //      <div className="cert-card" key={index}>

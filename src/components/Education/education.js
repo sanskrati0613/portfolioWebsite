@@ -8,18 +8,18 @@ import schoolIcon from '../../assets/schools.png';
 const educationData = [
   {
     degree: 'Bachelor of Technology in Computer Science – B.Tech',
-    institution: 'Arya College of Engineering and IT, Jaipur',
+    institution: 'Arya College of Engineering and IT, Jaipur || Rajasthan Technical University, Kota',
     duration: 'Sept 2022 – May 2026',
-    grade: '8.27 CGPA',
+    grade: '8.42 CGPA',
     description:
-      'I am pursuing a Bachelor of Technology (B.Tech) in Computer Science at Arya College of Engineering & IT, Jaipur. My academic journey emphasizes key areas like Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems (DBMS), Operating Systems, Software Engineering, and Web Development. I consistently engage in technical fests, collaborative projects, and certification programs to strengthen my problem-solving abilities and gain hands-on experience with modern development tools and frameworks.',
+    'Completed my Bachelor of Technology in Computer Science with a CGPA of 8.42. Built a strong foundation in Data Structures, Object-Oriented Programming, DBMS, Operating Systems, and Web Development while actively participating in technical projects and internships.',
     logo: collegeIcon,
   },
   {
     degree: 'Senior Secondary (Class 12th) – CBSE',
-    institution: 'Emmanuel Sr. Sec. Shool, Bundi',
+    institution: 'Emmanuel Sr. Sec. School, Bundi',
     duration: 'April 2020 – July 2021',
-    grade: '76%',
+    grade: '75.8%',
     description:
       'Completed my Class 12th from Emmanuel Sr. Sec. School under CBSE board with a focus on Physics, Chemistry, and Mathematics.',
     logo: schoolIcon,
@@ -28,9 +28,9 @@ const educationData = [
     degree: 'Secondary (Class 10th) – CBSE',
     institution: 'Emmanuel Sr. Sec. Shool, Bundi',
     duration: 'April 2018 – May 2019',
-    grade: '87%',
+    grade: '86.4%',
     description:
-      'Completed my  Class 10th from Emmanuel Sr. Sec. School under CBSE board and secured 87%.',
+      'Completed my  Class 10th from Emmanuel Sr. Sec. School under CBSE board and secured 86.4%.',
     logo: schoolIcon,
   }
 ];

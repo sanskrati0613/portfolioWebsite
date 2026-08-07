@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './navbar.css';
 import logo from '../../assets/log0.png';
-import contactImg from '../../assets/contact.png';
 import { Link } from 'react-scroll';
 import menu from '../../assets/menu.png';
 import { FaPaperPlane } from "react-icons/fa";

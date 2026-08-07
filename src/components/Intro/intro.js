@@ -1,7 +1,6 @@
 import React from 'react';
 import './intro.css';
 import bg from '../../assets/image.png';
-import btnImg from '../../assets/download.png';
 import { Typewriter } from "react-simple-typewriter";
 import { FaDownload } from "react-icons/fa";
 

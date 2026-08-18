@@ -1,6 +1,6 @@
 # 🌐 Personal Portfolio Website
 
-This is my **personal portfolio website** built using **React.js**. It showcases my projects, skills, certifications, contact form, and professional experience in a clean and responsive design.
+A modern, responsive portfolio website built with **React.js** and powered by **Sanity CMS**. The portfolio showcases my projects, technical skills, education, internships, and resume while allowing content to be updated dynamically without modifying the source code.
 
 ![Portfolio Screenshot](./public/preview.png)
 
@@ -12,25 +12,64 @@ This is my **personal portfolio website** built using **React.js**. It showcases
 
 ## 📌 Features
 
-- ✅ Fully responsive and mobile-friendly UI
-- 🎨 Modern design built with HTML, CSS, JavaScript, and React
-- 💼 Project showcase with image previews and modal popups
-- 📫 Contact form that sends messages directly to email using **EmailJS**
-- 🌐 Linked to GitHub, LinkedIn,Gmail, and Instagram profiles
-- 📝 Dynamic components and clean code architecture
+- 🎨 Modern, responsive UI
+- 📂 Dynamic Projects section powered by **Sanity CMS**
+- 🛠 Dynamic Skills section with categorized technologies
+- 📄 Resume managed through Sanity CMS
+- 📅 Automatically displays the latest resume update date
+- 🔍 Project filtering by category
+- 🖼 Project modal with technologies and external links
+- 📫 Contact form powered by EmailJS
+- 🌐 Social media integration (GitHub, LinkedIn, Gmail & Instagram)
+- ⚡ Fast deployment using Vercel
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Category       | Technology              |
-|----------------|--------------------------|
-| Frontend       | React.js, HTML5, CSS3    |
-| Styling        | Custom CSS (responsive)  |
-| Icons          | `react-icons`            |
-| Email Handling | [EmailJS](https://www.emailjs.com/) |
-| Hosting        | Vercel         |
-| Version Control| Git & GitHub             |
+| Category | Technologies |
+|----------|--------------|
+| Frontend | React.js, HTML5, CSS3, JavaScript |
+| CMS | Sanity CMS |
+| Styling | Custom CSS |
+| Icons | React Icons |
+| Email Service | EmailJS |
+| Hosting | Vercel |
+| Version Control | Git & GitHub |
+
+---
+
+
+## 📂 Current Sections
+
+- Home
+- About
+- Skills (CMS Powered)
+- Education
+- Internships
+- Projects (CMS Powered)
+- Resume (CMS Powered)
+- Contact
+
+---
+
+## 🚀 CMS Features
+
+This portfolio uses **Sanity CMS** to manage content dynamically.
+
+Currently managed through Sanity:
+
+- ✅ Projects
+- ✅ Skills
+- ✅ Resume
+
+Upcoming CMS sections:
+
+- 📜 Certificates
+- 💼 Experience
+- 🏆 Achievements
+
+This allows me to update my portfolio without modifying the React code or redeploying for every content change.
 
 ---
 
@@ -39,6 +78,7 @@ This is my **personal portfolio website** built using **React.js**. It showcases
 ```
 portfolio/
 ├── public/
+├── sanity/
 ├── src/
 │ ├── assets/
 │ ├── components/

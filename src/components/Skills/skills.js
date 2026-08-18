@@ -1,6 +1,8 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './skills.css';
+import { client, urlFor } from '../../sanity/client';
+import groq from 'groq';
 import html from '../../assets/html5.png'; 
 import css from '../../assets/css3.png';
 import js from '../../assets/javascript.png';
@@ -14,39 +16,67 @@ import {
     FaJava
 } from "react-icons/fa";
 
+const defaultIcons = {
+  HTML: html,
+  CSS: css,
+  JavaScript: js,
+  React: react,
+  "C++": cpp,
+  Python: python,
+  GitHub: github,
+  "VS Code": vscode,
+};
+
 const Skills = () => {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    client.fetch(
+      groq`*[_type=="skillCategory"] | order(order asc){
+        title,
+        order,
+        skills[]{
+          name,
+          icon
+        }
+      }`
+    ).then((data) => {
+      setCategories(data);
+    });
+  }, []);
+
   return (
     <section id="skills" className="skills-section">
     <span className="skillTitle">My Skills</span>
     <span className="skillDesc">Tools I use to bring ideas to life — from writing code to crafting user interfaces.</span>
-    <div className='skillsSet'>
-        <div className="skills-box">
-        <h2>Frontend</h2>
-        <div className="skills-list">
-          <div className="skill-item"><img src={html} alt="HTML" />HTML</div>
-          <div className="skill-item"><img src={css} alt="CSS" />CSS</div>
-          <div className="skill-item"><img src={js} alt="JavaScript" />JavaScript</div>
-          <div className="skill-item"><img src={react} alt="React" />React</div>
-        </div>
-      </div>
+    <div className="skillsSet">
+      {categories.map((category, index) => (
+        <div className="skills-box" key={index}>
+          <h2>{category.title}</h2>
 
-      <div className="skills-box">
-        <h2>Languages</h2>
-        <div className="skills-list">
-          <div className="skill-item"><img src={cpp} alt="C++" />C++</div>
-          <div className="skill-item"><img src={python} alt="Python" />Python</div>
-          <div className="skill-item"><img src={js} alt="JavaScript" />JavaScript</div>
-          <div className="skill-item"><FaJava className="skillIcon java" />Java</div>
-        </div>
-      </div>
+          <div className="skills-list">
+            {category.skills?.map((skill, i) => (
+              <div className="skill-item" key={i}>
 
-      <div className="skills-box">
-        <h2>Tools</h2>
-        <div className="skills-list">
-          <div className="skill-item"><img src={github} alt="GitHub" />GitHub</div>
-          <div className="skill-item"><img src={vscode} alt="VS Code" />VS Code</div>
+                {skill.name === "Java" ? (
+                  <FaJava className="skillIcon java" />
+                ) : (
+                  <img
+                    src={
+                      skill.icon
+                        ? urlFor(skill.icon).width(50).url()
+                        : defaultIcons[skill.name]
+                    }
+                    alt={skill.name}
+                  />
+                )}
+
+                {skill.name}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      ))}
     </div>
 
     </section>

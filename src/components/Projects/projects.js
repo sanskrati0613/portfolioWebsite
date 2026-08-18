@@ -1,59 +1,89 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './projects.css';
 import { FaExternalLinkAlt, FaGithub, FaTimes } from 'react-icons/fa';
 
-import portfolioWebsiteImg from '../../assets/portfolio1.png';
-import MovieVerseImg from '../../assets/portfolio2.png';
-import VoyageAdventuresImg from '../../assets/portfolio3.png';
-// import musicAppImg from '../../assets/music-app.png';
-
-const projectList = [
-  {
-    title: 'Portfolio Website',
-    image: portfolioWebsiteImg,
-    description: 'A personal portfolio website built using React.js to showcase my projects, skills, education, and professional experience. The site features a responsive layout, dynamic project modals, designed to provide a clear and interactive overview of my frontend development expertise, the portfolio emphasizes UI/UX aesthetics, accessibility, and modern web practices.',
-    tech: ['HTML', 'CSS', 'JavaScript', 'React'],
-    liveLink: 'https://sanskrati-jain-portfolio-website.vercel.app/',
-    codeLink: 'https://github.com/sanskrati0613/portfolioWebsite.git',
-  },
-    {
-    title: 'Voyage Adventures',
-    image: VoyageAdventuresImg,
-    description: "Developed a responsive travel booking website using React.js with destination browsing, booking interface, reviews, and dynamic routing for a seamless user experience.",
-    tech: ['HTML', 'CSS', 'JavaScript', 'React'],
-    liveLink: "https://voyage-adventures.vercel.app/",
-    codeLink: "https://github.com/sanskrati0613/VoyageAdventures",
-  },
-    {
-    title: 'MovieVerse',
-    image: MovieVerseImg,
-    description: ' MovieVerse is a responsive React-based web app to discover movies and TV shows using the TMDB API, featuring search, trending content, and a personalized watchlist.',
-    tech: ['HTML', 'CSS', 'JavaScript', 'React'],
-    liveLink: "https://movie-verse-sable.vercel.app/",
-    codeLink: "https://github.com/sanskrati0613/MovieVerse",
-  },
-  // {
-  //   title: 'Music Search App',
-  //   image: musicAppImg,
-  //   description: 'A web app that allows users to search for music, play samples, and create playlists using the Spotify API.',
-  //   tech: ['React', 'Bootstrap', 'Spotify API'],
-  //   liveLink: 'https://your-music-app.netlify.app/',
-  //   codeLink: 'https://github.com/yourusername/music-app',
-  // }
-];
+import { client, urlFor } from '../../sanity/client';
+import groq from 'groq';
 
 const Projects = () => {
+  const [projects, setProjects] = useState([]);
   const [activeProject, setActiveProject] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  useEffect(() => {
+    client
+      .fetch(
+        groq`*[_type=="project"] | order(order asc){
+          title,
+          category,
+          description,
+          image,
+          tech,
+          github,
+          live
+        }`
+      )
+      .then((data) => {
+        const formatted = data.map((project) => ({
+          title: project.title,
+          category: project.category,
+          description: project.description,
+          image: urlFor(project.image).url(),
+          tech: project.tech || [],
+          liveLink: project.live,
+          codeLink: project.github,
+        }));
+
+        setProjects(formatted);
+      });
+  }, []);
+
+  const categories = [
+  "All",
+  ...new Set(projects.map((p) => p.category)),
+];
+
+const filteredProjects =
+  selectedCategory === "All"
+    ? projects
+    : projects.filter(
+        (project) => project.category === selectedCategory
+      );
 
   return (
     <section id="projects">
       <h2 className="projects-title">My Projects</h2>
       <p className="projects-subtitle">A selection of web development projects I’ve built with various technologies.</p>
+      <div className="project-filters">
+  {categories.map((category) => (
+    <button
+      key={category}
+      className={`filter-btn ${
+        selectedCategory === category ? "active-filter" : ""
+      }`}
+      onClick={() => setSelectedCategory(category)}
+    >
+      {category === "All"
+        ? "All"
+        : category === "ai"
+        ? "AI / ML"
+        : category.charAt(0).toUpperCase() + category.slice(1)}
+    </button>
+  ))}
+</div>
       <div className="projects-container">
-        {projectList.map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <div className="project-card" key={index} onClick={() => setActiveProject(project)}>
             <img src={project.image} alt={`${project.title} Screenshot`} className="project-img" />
-            <h3>{project.title}</h3>
+            <div className="project-header">
+              <span className="project-category">
+                {project.category === "ai"
+                  ? "AI / ML"
+                  : project.category.charAt(0).toUpperCase() + project.category.slice(1)}
+              </span>
+
+              <h3>{project.title}</h3>
+            </div>
             <p className="project-desc">{project.description}</p>
           </div>
         ))}
@@ -64,7 +94,16 @@ const Projects = () => {
           <div className="modal-content">
             <button className="close-btn" onClick={() => setActiveProject(null)}><FaTimes /></button>
             <img src={activeProject.image} alt="Project Full" className="modal-img" />
-            <h2>{activeProject.title}</h2>
+            <div className="modal-title">
+              <span className="project-category">
+                {activeProject.category === "ai"
+                  ? "AI / ML"
+                  : activeProject.category.charAt(0).toUpperCase() +
+                    activeProject.category.slice(1)}
+              </span>
+
+              <h2>{activeProject.title}</h2>
+            </div>
             <p>{activeProject.description}</p>
               <div className="project-tech">
                 {activeProject.tech.map((t, i) => (

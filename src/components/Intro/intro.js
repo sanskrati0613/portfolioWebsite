@@ -4,7 +4,39 @@ import bg from '../../assets/image.png';
 import { Typewriter } from "react-simple-typewriter";
 import { FaDownload } from "react-icons/fa";
 
+import { useEffect, useState } from "react";
+import { client } from "../../sanity/client";
+import groq from "groq";
+
 const Intro = () => {
+    const [resumeUrl, setResumeUrl] = useState("");
+    const [resumeDate, setResumeDate] = useState("");
+
+    useEffect(() => {
+        client.fetch(
+            groq`*[_type=="resume"][0]{
+            "fileUrl": resumeFile.asset->url,
+            updatedAt
+            }`
+        ).then((data) => {
+            if (data) {
+            setResumeUrl(data.fileUrl);
+
+            if (data.updatedAt) {
+                const formattedDate = new Date(data.updatedAt).toLocaleDateString(
+                "en-IN",
+                {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                }
+                );
+
+                setResumeDate(formattedDate);
+            }
+            }
+        });
+        }, []);
     return (
         <section id="intro">
         <div className="introWrapper">
@@ -33,9 +65,15 @@ const Intro = () => {
                 <b>Available for Front-End Developer opportunities</b>
             </p>
 
-            <a href="/Sanskrati_CV.pdf" download>
+            <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
                 <button className="btn">    <FaDownload />
-                    Download CV
+                    <div className="resume-btn-text">
+      <span>Download Resume</span>
+
+      {resumeDate && (
+        <small>Updated {resumeDate}</small>
+      )}
+    </div>
                 </button>
             </a>
             </div>
